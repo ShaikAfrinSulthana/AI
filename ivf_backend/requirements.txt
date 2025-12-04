@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+python-dotenv
+sentence-transformers
+faiss-cpu
+numpy
+supabase
+groq
+torch    # optional but recommended for sentence-transformers

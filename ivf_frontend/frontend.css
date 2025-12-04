@@ -1,0 +1,174 @@
+/* -----------------------------------------------------
+   🌸 IVF Medical Assistant – Streamlit Safe CSS
+----------------------------------------------------- */
+
+:root {
+  --primary-bg: #fff7fb;
+  --secondary-bg: #ffeef7;
+  --tertiary-bg: #ffe3f1;
+
+  --text-primary: #4a2b34;
+  --text-secondary: #6d4c57;
+  --text-muted: #9c6b7a;
+
+  --accent-primary: #ff9ecb;
+  --accent-secondary: #ff7bb7;
+
+  --border-color: #f2c9d8;
+  --radius: 14px;
+  --shadow: 0 4px 12px rgba(255, 140, 180, 0.18);
+}
+
+/* DARK THEME FIX */
+html[data-theme='dark'] {
+  --primary-bg: #1a1a1d;
+  --secondary-bg: #242026;
+  --tertiary-bg: #342c35;
+
+  --text-primary: #ffe4ef;
+  --text-secondary: #ffd0df;
+  --text-muted: #d3aabb;
+
+  --accent-primary: #ff7abf;
+  --accent-secondary: #d96baa;
+  --border-color: #5a3a48;
+
+  --shadow: 0 4px 14px rgba(255, 120, 180, 0.22);
+}
+
+/* -----------------------------------------------------
+   MAIN BODY – Streamlit Safe
+----------------------------------------------------- */
+
+.block-container {
+  background: var(--primary-bg) !important;
+  padding-top: 2rem !important;
+}
+
+/* -----------------------------------------------------
+   HEADER
+----------------------------------------------------- */
+
+.main-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border-radius: var(--radius);
+  margin: 1.5rem auto;
+  box-shadow: var(--shadow);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+/* -----------------------------------------------------
+   CHAT CONTAINER
+----------------------------------------------------- */
+
+.chat-container {
+  max-height: 55vh;
+  overflow-y: auto;
+  padding: 1.2rem;
+  background: var(--secondary-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+/* Scrollbar */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-container::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+
+/* -----------------------------------------------------
+   MESSAGES
+----------------------------------------------------- */
+
+.message {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  animation: fadeInUp 0.35s ease-out;
+  box-shadow: var(--shadow);
+}
+
+.user-message {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  margin-left: auto;
+  width: fit-content;
+  max-width: 85%;
+}
+
+.assistant-message {
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  margin-right: auto;
+  width: fit-content;
+  max-width: 85%;
+}
+
+/* Timestamp */
+.message-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.4rem;
+  text-align: right;
+}
+
+/* -----------------------------------------------------
+   INPUT CONTAINER – SAFE
+----------------------------------------------------- */
+
+.input-container {
+  background: var(--primary-bg);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+/* DO NOT OVERRIDE TEXTAREA DIRECTLY */
+.stTextArea textarea {
+  border-radius: var(--radius) !important;
+  background: var(--secondary-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.stTextArea textarea:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 12px rgba(255, 120, 180, 0.55) !important;
+}
+
+/* -----------------------------------------------------
+   BUTTONS
+----------------------------------------------------- */
+
+.stButton>button {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  border: none !important;
+  padding: 0.6rem 1.1rem !important;
+  box-shadow: var(--shadow);
+  transition: 0.15s ease;
+}
+
+/* -----------------------------------------------------
+   ANIMATIONS
+----------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

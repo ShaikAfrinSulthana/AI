@@ -1,0 +1,25 @@
+# -----------------------------
+# Frontend: IVF Chatbot UI
+# -----------------------------
+
+streamlit==1.32.2
+requests==2.31.0
+python-dotenv==1.0.1
+Pillow==10.2.0
+numpy==1.26.4
+
+# For multilingual helper
+langdetect==1.0.9
+
+# Audio recording support
+sounddevice==0.4.6
+scipy==1.12.0
+
+# Input validation / formatting
+validators==0.22.0
+
+# animations / UI utils
+pygments==2.17.2
+
+# Optional: session storage, caching
+streamlit-extras==0.4.2
